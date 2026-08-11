@@ -1,0 +1,26 @@
+{
+  "name": "cars24-sdui-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cars24 Server-Driven UI (SDUI) Mobile Engine in React Native & TypeScript",
+  "main": "src/App.tsx",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native-web": "^0.19.10",
+    "lucide-react": "^0.344.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+}
