@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.2.0",
+  "minAppVersion": "1.0.0",
+  "screenId": "cars24_car_details",
+  "title": "Surprise Screen: Hyundai Creta SX (O) Buy Flow",
+  "initialState": {
+    "tenureMonths": 48,
+    "activeTab": "overview"
+  },
+  "root": {
+    "id": "root_car_detail_page",
+    "type": "page_container",
+    "children": [
+      {
+        "id": "sec_detail_header",
+        "type": "header_search_bar",
+        "props": {
+          "location": "BLR - Koramangala Hub",
+          "searchPlaceholder": "Search warranty, RC transfer, insurance...",
+          "unreadNotifications": false
+        }
+      },
+      {
+        "id": "sec_car_spec_hero",
+        "type": "car_detail_spec_sheet",
+        "props": {
+          "carTitle": "2021 Hyundai Creta SX (O)",
+          "variant": "1.5 Petrol Automatic (Sunroof)",
+          "priceFormatted": "₹ 11,45,000",
+          "heroImageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&auto=format&fit=crop&q=80",
+          "inspectionPassedCount": 140,
+          "specs": [
+            { "label": "Registration Year", "value": "2021" },
+            { "label": "KMs Driven", "value": "38,100 km" },
+            { "label": "Fuel Type", "value": "Diesel" },
+            { "label": "Transmission", "value": "Automatic" },
+            { "label": "Ownership", "value": "1st Owner" },
+            { "label": "Insurance", "value": "Comprehensive (Valid 2027)" }
+          ]
+        }
+      },
+      {
+        "id": "sec_detail_tenure_calc",
+        "type": "tenure_emi_calculator",
+        "props": {
+          "title": "Personalized EMI Financing",
+          "subtitle": "Select tenure to calculate instant loan breakdown",
+          "tenureOptions": [12, 24, 36, 48, 60],
+          "samplePrice": 1145000
+        },
+        "actions": {
+          "onTenureChange": {
+            "type": "UPDATE_STATE",
+            "targetStateKey": "tenureMonths"
+          },
+          "onOpenSheet": {
+            "type": "OPEN_BOTTOM_SHEET"
+          }
+        }
+      },
+      {
+        "id": "sec_detail_value_props",
+        "type": "value_prop_strip",
+        "props": {
+          "propsList": [
+            {
+              "id": "p1",
+              "title": "7-Day Trial",
+              "subtitle": "Test drive at home or return",
+              "iconName": "RotateCcw"
+            },
+            {
+              "id": "p2",
+              "title": "140 Checkpoints",
+              "subtitle": "Zero engine / chassis defects",
+              "iconName": "ShieldCheck"
+            },
+            {
+              "id": "p3",
+              "title": "Free RC Transfer",
+              "subtitle": "100% door-step execution",
+              "iconName": "Award"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sec_detail_reviews",
+        "type": "customer_reviews_rail",
+        "props": {
+          "title": "Verified Buyer Reviews for Creta",
+          "reviews": [
+            {
+              "id": "cr1",
+              "name": "Siddharth Rao",
+              "location": "Bangalore",
+              "rating": 5,
+              "carBought": "Hyundai Creta 2021",
+              "comment": "The condition was exactly as shown in the 360 view. Smooth transaction and zero hidden charges!"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sec_detail_footer",
+        "type": "sticky_footer_cta",
+        "props": {
+          "primaryCtaText": "Book Test Drive @ ₹999",
+          "secondaryCtaText": "Call Hub",
+          "activeTab": "home"
+        },
+        "actions": {
+          "onCtaPress": {
+            "type": "SHOW_TOAST",
+            "message": "Test Drive Slot Reserved! A Cars24 valet will contact you shortly."
+          }
+        }
+      }
+    ]
+  }
+}
