@@ -34,7 +34,7 @@
       color: #FFFFFF;
       padding: 20px;
       border-radius: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .header-box h1 { color: #FFFFFF; border-bottom: 2px solid #FF6D00; margin-top: 0; }
     .badge {
@@ -50,9 +50,21 @@
     .link-card {
       background: #FFF7ED;
       border: 2px solid #FFEDD5;
+      padding: 16px;
+      border-radius: 12px;
+      margin: 16px 0;
+    }
+    .video-highlight {
+      background: #0F172A;
+      color: #FFFFFF;
       padding: 14px;
       border-radius: 10px;
-      margin: 12px 0;
+      margin-top: 10px;
+    }
+    .video-highlight a {
+      color: #FF9E00;
+      font-size: 12pt;
+      font-weight: 800;
     }
     table {
       width: 100%;
@@ -86,15 +98,6 @@
     .page-break {
       page-break-before: always;
     }
-    .video-box {
-      background: #0F172A;
-      color: #FFFFFF;
-      padding: 16px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 14px 0;
-    }
-    .video-box a { color: #FF9E00; font-size: 13pt; font-weight: 800; }
   </style>
 </head>
 <body>
@@ -104,73 +107,88 @@
     <span class="badge">Cars24 Mobile Engineering</span>
     <h1 style="margin-top:8px;">Server-Driven UI (SDUI) Assignment Submission</h1>
     <p style="color:#94A3B8; margin:0;">
-      <strong>Candidate Repository:</strong> <a href="https://github.com/adnaan786/Cars24-assignment" style="color:#FF9E00;">github.com/adnaan786/Cars24-assignment</a><br>
-      <strong>Platform Stack:</strong> React Native & TypeScript (Depth First Architecture)<br>
+      <strong>Candidate GitHub:</strong> <a href="https://github.com/adnaan786/Cars24-assignment" style="color:#FF9E00;">github.com/adnaan786/Cars24-assignment</a><br>
+      <strong>Platform Stack:</strong> React Native & TypeScript (Depth-First System Build)<br>
       <strong>Selected Reference Screen:</strong> Cars24 Home / Landing Page
     </p>
   </div>
 
-  <!-- Key Links & Video Recording Section -->
+  <!-- Key Submission Links Section -->
   <div class="link-card">
-    <h3 style="margin-top:0; color:#C2410C;">📌 Quick Submission Links</h3>
-    <ul>
+    <h3 style="margin-top:0; color:#C2410C;">📌 Official Submission Links</h3>
+    <ul style="margin-bottom:8px;">
       <li><strong>GitHub Repository:</strong> <a href="https://github.com/adnaan786/Cars24-assignment.git">https://github.com/adnaan786/Cars24-assignment.git</a></li>
-      <li><strong>Live Screen Recording Video (3-5 min):</strong> Replace with your uploaded link: <a href="https://drive.google.com/file/d/YOUR_VIDEO_ID/view">View Demo Video on Google Drive / Loom / YouTube</a></li>
       <li><strong>Local Dev Studio Server:</strong> <code>http://localhost:5173</code> (or <code>http://192.168.1.8:5173</code> on Mobile Wi-Fi)</li>
     </ul>
+
+    <div class="video-highlight">
+      <div style="font-size:9pt; text-transform:uppercase; font-weight:800; color:#94A3B8; margin-bottom:4px;">🎬 Screen Recording Demo (3–5 Min)</div>
+      <a href="https://drive.google.com/file/d/12oWUs97uQ3Rc_tZAfPWcnYNRCR-jWmGE/view?usp=sharing">Watch Cars24 SDUI Demo Video on Google Drive →</a>
+      <div style="font-size:9pt; color:#CBD5E1; margin-top:4px;">Demonstrates JSON page rendering, live tenure calculation, bottom sheet breakdown, unknown component fallback, live JSON edit, and PERF benchmark suite.</div>
+    </div>
   </div>
 
   <!-- Section 0: Commit History Proof -->
   <h2>📜 Git Commit History Proof</h2>
-  <p>Our repository contains 9 meaningful step-by-step commits demonstrating engineering progression:</p>
+  <p>Our repository contains 10 meaningful step-by-step commits demonstrating engineering progression:</p>
   <table>
     <thead>
       <tr>
         <th>Commit Hash</th>
         <th>Message / Phase</th>
-        <th>Files Affected</th>
+        <th>Deliverable Category</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+        <td><code>d90e512</code></td>
+        <td>docs: add ready-to-submit PDF document CARS24_SDUI_SUBMISSION.pdf</td>
+        <td>Final PDF Deliverable</td>
+      </tr>
+      <tr>
+        <td><code>5e1ee13</code></td>
+        <td>chmod: add push.bat helper script for GitHub submission</td>
+        <td>Submission Tooling</td>
+      </tr>
+      <tr>
         <td><code>c8341cd</code></td>
         <td>docs: add comprehensive README.md, PERF.md, COVERAGE.md, and AI_WORKFLOW.md submission deliverables</td>
-        <td>4 docs files</td>
+        <td>4 Documentation Deliverables</td>
       </tr>
       <tr>
         <td><code>39bf92b</code></td>
         <td>feat(studio): add BenchmarkSuite profiler, LiveJSONEditor, and mobile emulator dashboard</td>
-        <td>App.tsx, Studio files</td>
+        <td>Interactive Studio & Benchmarks</td>
       </tr>
       <tr>
         <td><code>815dc19</code></td>
         <td>feat(static): implement hardcoded StaticCars24Home component for baseline performance comparison</td>
-        <td>StaticCars24Home.tsx</td>
+        <td>Static Baseline Component</td>
       </tr>
       <tr>
         <td><code>0da0119</code></td>
         <td>feat(schemas): create Cars24 Home Screen & Car Details surprise screen JSON payloads</td>
-        <td>JSON schema files</td>
+        <td>JSON Payload Schemas</td>
       </tr>
       <tr>
         <td><code>d2d77a6</code></td>
         <td>feat(engine): implement ComponentRegistry, SDUIRenderer engine & UnknownFallbackView graceful degradation</td>
-        <td>ComponentRegistry, SDUIRenderer</td>
+        <td>SDUI Core Engine</td>
       </tr>
       <tr>
         <td><code>6c0e97a</code></td>
         <td>feat(components): implement 9 native Cars24 SDUI component views</td>
-        <td>9 component views</td>
+        <td>React Native Views</td>
       </tr>
       <tr>
         <td><code>c9802f0</code></td>
         <td>feat(sdui): add core TypeScript schema interfaces & ActionHandler engine</td>
-        <td>types/sdui.ts, ActionHandler.ts</td>
+        <td>Type Definitions & Actions</td>
       </tr>
       <tr>
         <td><code>195fe2f</code></td>
         <td>chmod: initialize React Native TypeScript SDUI project structure</td>
-        <td>package.json, tsconfig.json</td>
+        <td>Project Setup</td>
       </tr>
     </tbody>
   </table>
